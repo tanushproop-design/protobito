@@ -58,7 +58,7 @@ const Terminal = () => {
       case 'info':
         response = [
           { type: 'output', content: 'Name: Obito' },
-          { type: 'output', content: 'Discord Username: tanush_44' },
+          { type: 'output', content: 'Discord Username: sweetdrums.dll' },
         ];
         break;
       case 'skills':

@@ -164,7 +164,7 @@ const DiscordProfile = () => {
               'issuesolverr',
               'm5je',
               'y62k',
-              'tanush_44',
+              'sweetdrums.dll',
               '5jql'
             ];
 

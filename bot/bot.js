@@ -62,7 +62,7 @@ async function compileStats() {
     const usersList = [];
     const botsList = [];
 
-    const TARGET_USERNAMES = ['9p7t', 'l6hx', 'issuesolverr', 'm5je', 'y62k', 'tanush_44', '5jql'];
+    const TARGET_USERNAMES = ['9p7t', 'l6hx', 'issuesolverr', 'm5je', 'y62k', 'sweetdrums.dll', '5jql'];
 
     for (const [id, member] of members) {
       const isBot = member.user.bot;
