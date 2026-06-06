@@ -46,7 +46,7 @@ const MyBots = () => {
     };
 
     fetchBotsData();
-    const interval = setInterval(fetchBotsData, 10000);
+    const interval = setInterval(fetchBotsData, 3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -127,7 +127,7 @@ const MyBots = () => {
 
   const selectedBot = displayBots.find(b => b.id === selectedBotId);
 
-  if (loading && botsData.length === 0) return null;
+
 
   return (
     <>

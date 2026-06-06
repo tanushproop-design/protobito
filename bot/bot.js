@@ -152,8 +152,8 @@ client.once('ready', () => {
   // Compile stats immediately on startup
   compileStats();
 
-  // Run sync routine periodically (every 45 seconds)
-  setInterval(compileStats, 45 * 1000);
+  // Run sync routine periodically (every 5 seconds)
+  setInterval(compileStats, 5 * 1000);
 });
 
 client.login(token).catch(err => {

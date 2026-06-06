@@ -91,7 +91,7 @@ const DiscordProfile = () => {
     };
 
     fetchDiscordData();
-    const interval = setInterval(fetchDiscordData, 10000);
+    const interval = setInterval(fetchDiscordData, 3000);
     return () => clearInterval(interval);
   }, []);
 

@@ -78,7 +78,7 @@ export default async function handler(req, res) {
     }
   }
 
-  // Cache response for 10s to stay within Discord rate limits
-  res.setHeader('Cache-Control', 's-maxage=10, stale-while-revalidate=5');
+  // Disable Vercel caching to serve live real-time Discord presence updates
+  res.setHeader('Cache-Control', 'no-store, max-age=0');
   res.status(200).json(stats);
 }

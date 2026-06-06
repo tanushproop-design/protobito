@@ -66,7 +66,7 @@ const ServerWidget = () => {
     };
 
     fetchServerStats();
-    const interval = setInterval(fetchServerStats, 10000);
+    const interval = setInterval(fetchServerStats, 3000);
     return () => clearInterval(interval);
   }, []);
 
