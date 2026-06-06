@@ -93,16 +93,7 @@ const MyBots = () => {
     setTimeout(() => setCopiedBot(false), 2000);
   };
 
-  const TARGET_BOT_IDS = [
-    '1425494057014136913', // Vetlo™
-    '1494642306102329435'  // Vally™
-  ];
-
-  // Filter only the custom bots requested
-  const filteredBots = botsData.filter(b => TARGET_BOT_IDS.includes(b.id));
-
-  // If there are no bots in the response, we can render hardcoded placeholders for them so the section is never empty
-  const displayBots = filteredBots.length > 0 ? filteredBots : [
+  const targetBotsConfig = [
     {
       id: '1425494057014136913',
       username: 'Vetlo™',
@@ -118,8 +109,21 @@ const MyBots = () => {
       avatar: null,
       status: 'offline',
       activities: []
+    },
+    {
+      id: '1484867384077455471',
+      username: 'DEX jija',
+      displayName: 'DEX jija',
+      avatar: null,
+      status: 'offline',
+      activities: []
     }
   ];
+
+  const displayBots = targetBotsConfig.map(target => {
+    const liveBot = botsData.find(b => b.id === target.id);
+    return liveBot ? liveBot : target;
+  });
 
   const selectedBot = displayBots.find(b => b.id === selectedBotId);
 
@@ -408,7 +412,9 @@ const MyBots = () => {
                       <a 
                         href={selectedBot.id === '1425494057014136913' 
                           ? 'https://canary.discord.com/oauth2/authorize?client_id=1425494057014136913' 
-                          : 'https://canary.discord.com/oauth2/authorize?client_id=1494642306102329435'
+                          : selectedBot.id === '1494642306102329435'
+                            ? 'https://canary.discord.com/oauth2/authorize?client_id=1494642306102329435'
+                            : `https://discord.com/oauth2/authorize?client_id=${selectedBot.id}&permissions=8&scope=bot%20applications.commands`
                         }
                         target="_blank" 
                         rel="noopener noreferrer" 
