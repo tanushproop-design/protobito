@@ -127,7 +127,7 @@ const MyBots = () => {
 
   const selectedBot = displayBots.find(b => b.id === selectedBotId);
 
-  if (loading && filteredBots.length === 0) return null;
+  if (loading && botsData.length === 0) return null;
 
   return (
     <>
