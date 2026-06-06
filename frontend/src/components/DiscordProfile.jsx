@@ -12,7 +12,7 @@ const TiltCard = ({ children, className, style, onClick, onMouseEnter, onMouseLe
       className={className}
       style={{
         ...style,
-        transition: 'box-shadow 0.3s ease, border-color 0.3s ease'
+        transition: 'box-shadow 0.15s ease, border-color 0.15s ease'
       }}
       onClick={onClick}
       onMouseEnter={onMouseEnter}
@@ -149,7 +149,7 @@ const DiscordProfile = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.4 }}
         >
           <h2 style={{ fontSize: '2.5rem', marginBottom: '2rem', textAlign: 'center' }}>
             Team <span className="text-gradient text-glow">Activity</span>
@@ -453,7 +453,7 @@ const DiscordProfile = () => {
               padding: '0',
               boxShadow: '0 0 60px rgba(138,43,226,0.3)',
               position: 'relative',
-              animation: 'modalPopIn 0.25s ease-out',
+              animation: 'modalPopIn 0.15s ease-out',
             }}
           >
             {/* CLOSE BUTTON */}

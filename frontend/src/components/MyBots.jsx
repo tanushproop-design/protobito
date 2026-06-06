@@ -12,7 +12,7 @@ const TiltCard = ({ children, className, style, onClick, onMouseEnter, onMouseLe
       className={className}
       style={{
         ...style,
-        transition: 'box-shadow 0.3s ease, border-color 0.3s ease'
+        transition: 'box-shadow 0.15s ease, border-color 0.15s ease'
       }}
       onClick={onClick}
       onMouseEnter={onMouseEnter}
@@ -109,14 +109,6 @@ const MyBots = () => {
       avatar: null,
       status: 'offline',
       activities: []
-    },
-    {
-      id: '1484867384077455471',
-      username: 'DEX jija',
-      displayName: 'DEX jija',
-      avatar: null,
-      status: 'offline',
-      activities: []
     }
   ];
 
@@ -136,7 +128,7 @@ const MyBots = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.4 }}
         >
           <h2 style={{ fontSize: '3rem', marginBottom: '3rem', textAlign: 'center', fontFamily: "'Space Grotesk', sans-serif" }}>
             My <span className="text-gradient text-glow">Bots</span>
@@ -278,7 +270,7 @@ const MyBots = () => {
               padding: '0',
               boxShadow: '0 0 60px rgba(138,43,226,0.3)',
               position: 'relative',
-              animation: 'modalPopIn 0.25s ease-out',
+              animation: 'modalPopIn 0.15s ease-out',
             }}
           >
             {/* CLOSE BUTTON */}
