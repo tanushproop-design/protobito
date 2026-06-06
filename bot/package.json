@@ -1,0 +1,14 @@
+{
+  "name": "mellow-stats-bot",
+  "version": "1.0.0",
+  "description": "Discord bot to sync Mellow Cafe member counts and statuses to MongoDB",
+  "main": "bot.js",
+  "type": "module",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5"
+  }
+}
